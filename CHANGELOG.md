@@ -1,3 +1,15 @@
+## 1.53.0.0 (2024-05-23)
+
+- **Feature** The AWS Builder Id and IAM Identity Center (SSO) login flow has been improved to support authorization code + PKCE in supported regions.  This new flow simplifies the login process by eliminating the need to verify a code while remaining secure.  The device code flow will continue to be used in regions that do not support the authorization code + PKCE flow.
+
+## 1.52.0.0 (2024-05-09)
+
+- **Bug Fix** Fix issue where Amazon Q inline suggestions would appear over-indented
+
+## 1.51.0.0 (2024-04-29)
+
+- **Feature** Amazon CodeWhisperer functionality is now part of Amazon Q Developer. All existing CodeWhisperer features will continue to function including inline code suggestions.
+
 ## 1.50.0.0 (2024-03-28)
 
 - **Bug Fix** Fix issue where IAM IdC sign-ins for non-US sign-in portals would not automatically refresh when using CodeWhisperer
