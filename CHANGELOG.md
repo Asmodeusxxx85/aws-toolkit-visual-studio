@@ -1,3 +1,20 @@
+## 1.55.1.0 (2024-07-16)
+
+- **Bug Fix** Added more safeguards to extension start-up based on issues reported in version 1.54.0.0 (https://github.com/aws/aws-toolkit-visual-studio/issues/441)
+
+## 1.55.0.0 (2024-07-11)
+
+- **Bug Fix** Fix issue where settings could be overwritten when navigating between different settings pages
+- **Deprecation** This is the last planned AWS Toolkit release for Visual Studio 2019. You are encouraged to run Visual Studio 2022, and the corresponding AWS Toolkit extension. An info bar has been added to the Toolkit as a reminder - see https://github.com/aws/aws-toolkit-visual-studio/issues/447 for details.
+
+## 1.54.0.1 (2024-07-03)
+
+- **Bug Fix** Added safeguards to extension start-up based on issues reported in version 1.54.0.0 (https://github.com/aws/aws-toolkit-visual-studio/issues/441)
+
+## 1.54.0.0 (2024-07-02)
+
+- **Feature** Amazon Q is now generally available for Visual Studio 2022. Use Amazon Q Chat to help author, explain, refactor, fix, and optimize code. Run security scans on C# code to catch security vulnerabilities.
+
 ## 1.53.0.0 (2024-05-23)
 
 - **Feature** The AWS Builder Id and IAM Identity Center (SSO) login flow has been improved to support authorization code + PKCE in supported regions.  This new flow simplifies the login process by eliminating the need to verify a code while remaining secure.  The device code flow will continue to be used in regions that do not support the authorization code + PKCE flow.
