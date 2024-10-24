@@ -1,6 +1,35 @@
+## 1.59.0.0 (2024-10-24)
+
+- **Bug Fix** Fix a bug that could cause the IDE to freeze during startup
+- **Feature** The extension's Getting Started experience has been improved:
+  - Added ability to enable and disable AWS Toolkit and Amazon Q feature sets. This allows control over which parts of the extension are integrated with Visual Studio.
+  - The Getting Started experience is automatically displayed the first time Visual Studio is launched after installing this version (or a newer version).
+  - Added option to access the Getting Started experience at any time from the "Extensions" > "AWS Toolkit" > "Getting Started" menus.
+- **Feature** Publish to AWS has been updated to use v1.26.1 of the AWS .NET deploy tool. This version of the Toolkit includes the following Deploy Tool changes:
+  - Fixed container deployment failures on Apple silicon by ensuring X64 platform specification.
+  - Addressed deployment failures caused by System.Text.Json issues by pinning the version to mitigate .NET 9 bugs.
+  - See https://github.com/aws/aws-dotnet-deploy/releases/tag/1.25.3, https://github.com/aws/aws-dotnet-deploy/releases/tag/release_2024-09-27 and https://github.com/aws/aws-dotnet-deploy/releases/tag/release_2024-10-11 for more details.
+
+## 1.58.1.0 (2024-09-19)
+
+- **Bug Fix** Performance improvements when automatically generating inline code suggestions with Amazon Q.
+- **Bug Fix** Troubleshooting instructions to fix extension start-up issues reported since version 1.54.0.0 (https://github.com/aws/aws-toolkit-visual-studio/issues/452) is now listed in the output window. An info bar has been added to the toolkit as a reminder: see [guide](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/general-troubleshoot.html#general-troubleshoot-component-initilization) for details.
+
+## 1.58.0.0 (2024-09-05)
+
+- **Feature** Publish to AWS has been updated to use v1.24.4 of the AWS .NET deploy tool. This version of the Toolkit includes the following Deploy Tool changes:
+  - Projects can now be deployed to Elastic Beanstalk without requiring self-contained builds.
+  - Fix deployment failure when System.Text.Json detects a dependency that has a listed vulnerability.
+  - See https://github.com/aws/aws-dotnet-deploy/releases/tag/1.23.4 and https://github.com/aws/aws-dotnet-deploy/releases/tag/1.24.4 for more details.
+
+## 1.57.0.0 (2024-08-22)
+
+- **Bug Fix** Amazon Q Chat now uses the currently active code document as context. This makes it easier to ask questions about your code without needing to add it to your prompt.
+- **Feature** When Amazon Q is running a security scan, a progress indicator is now shown next to the Q icon in the margin.
+
 ## 1.56.0.0 (2024-08-01)
 
-- **Feature** * Publish to AWS has been updated to use v1.22.5 of the AWS .NET deploy tool. This version of the Toolkit includes the following Deploy Tool changes:
+- **Feature** Publish to AWS has been updated to use v1.22.5 of the AWS .NET deploy tool. This version of the Toolkit includes the following Deploy Tool changes:
   - Performance improvements when editing deployment configurations.
   - When configuring a deployment to an existing target, fewer fields will be shown when they cannot be adjusted.
   - Add support for choosing between a "Public" and an "Internal" Load Balancer when deploying an Elastic Beanstalk application into a VPC
@@ -45,7 +74,7 @@
 
 - **Bug Fix** Fix issue where IAM IdC sign-ins for non-US sign-in portals would not automatically refresh when using CodeWhisperer
 - **Deprecation** Removed the nodejs12.x runtime from Lambda deployment dialogs. This runtime has reached end of support. See https://docs.aws.amazon.com/lambda/latest/dg/runtime-support-policy.html for more details.
-- **Feature** * Publish to AWS has been updated to use v1.19.13 of the AWS .NET deploy tool. This version of the Toolkit includes the following Deploy Tool changes:
+- **Feature** Publish to AWS has been updated to use v1.19.13 of the AWS .NET deploy tool. This version of the Toolkit includes the following Deploy Tool changes:
   - Security group settings now show the group name in addition to the group id
   - Fix deprecated Lambda runtime failure when deploying Blazor projects
   - Blazor WebAssembly deployments now allow CloudFront to write to the access log S3 bucket
